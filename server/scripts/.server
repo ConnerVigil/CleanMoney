@@ -1,5 +1,0 @@
-BUCKET='clean-money-lambda'
-EDIT_LAMBDALIST='
-loadMoreTransactions
-'
-LAMBDALAYER_ARN=
