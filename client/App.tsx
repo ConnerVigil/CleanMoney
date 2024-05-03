@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { supabase } from "./lib/supabase";
-import HomeScreen from "./screens/HomeScreen";
 import { Session } from "@supabase/supabase-js";
-import { View, Text } from "react-native";
 import Auth from "./components/Auth";
 import TabWrapper from "./screens/TabWrapper";
 
@@ -16,6 +14,7 @@ const App = () => {
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
+      console.log(JSON.stringify(session, null, 2));
     });
 
     supabase.auth.onAuthStateChange((_event, session) => {
