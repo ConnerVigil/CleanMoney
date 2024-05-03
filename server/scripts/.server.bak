@@ -1,0 +1,5 @@
+BUCKET='clean-money-lambda'
+EDIT_LAMBDALIST='
+loadMoreTransactions
+'
+LAMBDALAYER_ARN=arn:aws:lambda:us-west-1:082020101199:layer:Tweeter-Server-Dependencies:41
