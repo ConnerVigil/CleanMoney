@@ -1,0 +1,26 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: vigilcapital
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: server
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: Server
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-west-1
+
+functions:
+  hello:
+    handler: lambda/handler.handler
+    events:
+      - httpApi:
+          path: /hello
+          method: get
+
+  login:
+    handler: lambda/login.handler
+    events:
+      - httpApi:
+          path: /login
+          method: get

@@ -1,8 +1,0 @@
-{
-  "name": "clean-money-mono-repo",
-  "private": true,
-  "workspaces": [
-    "client",
-    "server"
-  ]
-}
